@@ -60,6 +60,37 @@
     <a href="cookies.html">Cookies</a>
   </div>
 </footer>
+<!-- Age Verification Popup -->
+<div id="age-verification" class="age-overlay">
+  <div class="age-popup">
+    <h2>Important Notice</h2>
+        <p>This website is intended for informational and promotional purposes only. By continuing, you agree to our <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="age-buttons">
+      <button id="btn-yes">Continue</button>
+      <button id="btn-no">No</button>
+    </div>
+  </div>
+</div>
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var yesBtn = document.getElementById("btn-yes");
+    var noBtn = document.getElementById("btn-no");
+ 
+    // Change these URLs as you want
+    var yesLink = "/home/";  
+    var noLink = "/home/";  
+ 
+    yesBtn.addEventListener("click", function () {
+      window.location.href = yesLink;
+    });
+ 
+    noBtn.addEventListener("click", function () {
+      window.location.href = noLink;
+    });
+  });
+</script>
 
 </body>
 </html>
+
